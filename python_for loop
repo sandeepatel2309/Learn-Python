@@ -1,0 +1,54 @@
+lst1 = []
+lst2 = []
+
+for x in range(1,101):
+
+        if x%2 == 0:
+            lst1.append(x)
+        else:
+            lst2.append(x)
+
+
+print("Even Numbers = ", lst1)
+print("Odd Numbers = ", lst2)
+
+
+# print factorial
+y=1
+#
+for x in range (1, 6):
+    y = y*x
+
+print(y)
+
+for x in range (1,11):
+    if x!=3 and x!=6:
+        print(x)
+
+for x in range(1, 51):
+    if x%3==0 and x%5==0:
+        print("fizzbizz = ",x)
+    elif x%3==0:
+        print("Fizz = ", x)
+    elif x%5==0:
+        print("Bizz")
+    else:
+        print(x, " = cannot divide by 3 & 5")
+
+num = 4455
+num2 = []
+
+for x in str(num):
+    if int(x)%2 == 0:
+        num2.append(0)
+    else:
+        num2.append(1)
+
+print(num2)
+
+lst1 = [12, 34, 33, 9, 334]
+print(lst1[0] + lst1[len(lst1)-1])
+lst1.reverse()
+print(lst1)
+lst1.sort(reverse=True)
+print(lst1[0])
