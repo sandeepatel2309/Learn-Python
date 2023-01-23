@@ -1,0 +1,35 @@
+#Created and opened new file
+f = open("myFile.txt", "w+")
+
+#writing in file (It will Override content)
+f.write("This is my first file and I have named it as")
+
+#read file and print the file content
+r = f.read()
+print(r)
+
+# Handaling files - create, write, append, read, delete
+
+class filehandaling:
+    def __init__(self, filename, comment):
+        self.filename = filename
+        self.comment = comment
+
+    def create_a_file(self):
+        return open(self.filename,'w')
+
+    def write_in_file(self):
+        f = open(self.filename, "a+")
+        f.write(self.comment)
+        f.close()
+
+    def read_file(self):
+        f = open(self.filename, "r+")
+        r = f.read()
+        f.close()
+        return r
+
+mfile = filehandaling("new1.txt", "\n My first comment done")
+# mfile.create_a_file()
+mfile.write_in_file()
+print(mfile.read_file())
