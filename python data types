@@ -1,9 +1,29 @@
+
+#String data type
 pystring = "This is a string"
+
+#Integer data type
 pyint = 1991
+
+#Float data type
 pyfloat = 91.88
+
+#Boolean data type
 pyboolean = True
+
+#List data type
 pylist = ["List", 991, True, 12.22]
+
+#Tuple data type
 pytuple = ("Tuple", 119, False, 22.12)
+
+#Set data type (will remove duplicate values)
+setlist = [22, 34, 43, 34, 55, 11, 22, 33, "Mona", "Mona"]
+set(setlist)
+print("List values after set = ",setlist)
+
+#Dictionary data type
+mydictionary = {"Name": "Sam"}
 
 #get a type of variable
 print(type(pystring)," = ", pystring)
@@ -36,14 +56,3 @@ indxlist.append("Seema")
 indxlist.extend("Ch")
 print("Updated indxlist list = ", indxlist)
 print("length of indxlist list = ", len(indxlist))
-
-#using set data type
-setlist = [22, 34, 43, 34, 55, 11, 22, 33, "Mona", "Mona"]
-set(setlist)
-print("List values after set = ",setlist)
-
-#dictionary
-
-mydictionary = {"Name": "Sam"}
-print(type(mydictionary))
-print(mydictionary)
