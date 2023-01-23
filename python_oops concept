@@ -1,0 +1,74 @@
+import random
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+
+class Intro:
+    def __init__(self, name, location, education):
+        self.name = name
+        self.location = location
+        self.education = education
+
+    def whoru(self):
+        return f"My name is {self.name}."
+
+    def whrulive(self):
+        return f"I am from {self.location}."
+
+    def myedu(self):
+        return f"I have completed {self.education}."
+
+intro = Intro("Sandip", "Ahmedabad", "Engineering")
+print(intro.whoru(), intro.whrulive(), intro.myedu())
+
+# Calculator for 2 numbbers
+class Calculate:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def addition(self):
+        return self.num1 + self.num2
+
+    def substraction(self):
+        if self.num1 < self.num2:
+            return self.num2 - self.num1
+        else:
+            return self.num1 - self.num2
+
+    def multiplication(self):
+        return self.num1 * self.num2
+
+    def division(self):
+        return self.num1 / self.num2
+
+calc = Calculate(11,55)
+print(" Sum = ",calc.addition(), "\n", "Substraction = ", calc.substraction(), "\n", "Multiplication = ", calc.multiplication(), "\n", "Division = ", calc.division())
+
+
+# using first function return value in another function
+
+class Percentage:
+    def __init__(self,num1, num2):
+        self.num1 = num1
+        self.num2 = num2
+
+    def find(self):
+        totalmax = 200
+        totalobtain = self.num1 + self.num2
+        return (totalobtain/totalmax)*100
+
+    def printfind(self):
+        print("percentage is = ", self.find())
+
+rpercntage = Percentage(50, 30)
+rpercntage.printfind()
+
