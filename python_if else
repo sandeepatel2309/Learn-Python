@@ -1,0 +1,91 @@
+num1 = 123
+num2 = 453
+sum = num1 + num2
+# // The condition is for even and odd
+if (sum%2 == 0):
+    {
+        print("sum is even")
+    }
+else:
+    {
+        print("sum is odd")
+    }
+
+
+
+student_per = 95
+
+if (student_per >= 90):{
+    print("You have got A+")
+    }
+elif (student_per < 90 and student_per > 80):
+    {
+        print("You have got A")
+    }
+elif (student_per <= 80 and student_per >=65 ):
+    {
+        print("You have got B+")
+    }
+elif (student_per <= 64 and student_per >=55 ):
+    {
+        print("You have got B")
+    }
+elif (student_per <= 54 and student_per >=45 ):
+    {
+        print("You have got C+")
+    }
+elif (student_per <= 44 and student_per >=35 ):
+    {
+        print("You have got c")
+    }
+else:
+    {
+        print("You have Failed")
+    }
+
+# list length and using that manipulate list by if else
+list1 = [23, 34, 43, 33, 25, 11, 12]
+list1_length = len(list1)
+print(list1_length)
+
+if len(list1) % 5 != 0:
+    print(tuple(list1))
+    list2 = tuple(list1)
+    print(type(list2))
+else:
+    print("List is division by 5")
+
+list2 = [1,56,67,98,324,345,2,3,4,5,6,6,6,6,6]
+list2.sort(reverse=True)
+print(list2)
+
+list3 = list2.copy()
+print(list3)
+
+list3.clear()
+print(list3)
+
+el1 = []
+num1 = 12
+num2 = 2290
+num3 = num1*num2
+
+if len(str(num3)) >= 5 :
+    el1.append(num3)
+    tupl1 = tuple(el1)
+    print(tupl1)
+
+else:
+    el1.append(num3)
+    print(el1)
+
+str1 = "Sandip"
+str2 = "Patel"
+str3 = str1+" "+str2
+spindex = str3.index(" ")
+
+if spindex%2 == 0:
+    print("even : ", spindex)
+
+else:
+    print("Odd : ", spindex)
