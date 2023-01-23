@@ -1,0 +1,314 @@
+for x in lst1:
+    if x>0:
+        y=x
+    else:
+        continue
+print(x)
+
+num1 = 151
+sum=0
+for x in str(num1):
+
+    sum = sum + int(x)*int(x)*int(x)
+
+if num1==sum:
+    print(num1, " is a armstrong number")
+else:
+    print(num1, " is not a armstrong number")
+
+
+def armstrongNumber (num):
+    sum3 = 0
+    for x in str(num):
+        x = int(x)
+        sum3 += x*x*x
+    if sum3 == num:
+        return True
+
+armlst = []
+for x in range (1000):
+    if armstrongNumber(x) == True:
+        armlst.append(x)
+
+print(armlst)
+
+def armstrongNumberlist(num):
+    sum3 = 0
+    numlen = len(str(num))
+    for x in str(num):
+        sum3 += int(x) ** numlen
+    if sum3 == num:
+        return True
+
+armlst = []
+for x in range (10000):
+    if armstrongNumberlist(x) == True:
+        armlst.append(x)
+
+print(armlst)
+
+#print that list is monotonic or not
+def listorder(lst1):
+   ln = len(lst1)
+   lst2 = []
+   lst3 = []
+   for i in range(ln-1):
+       # print("list value = ", lst1[i], "  ", lst1[i+1])
+       if lst1[i] < lst1[i+1]:
+           lst2.append(1)
+
+       elif lst1[i] > lst1[i+1]:
+           lst3.append(1)
+
+   if len(lst2) == ln-1 or len(lst3) == ln-1:
+       print("List is monotonic")
+   else:
+       print("List is not monotonic")
+
+
+def listorder(lst1):
+   ln = len(lst1)
+   isasc = False
+   isdec = False
+
+   for i in range(ln-1):
+       if lst1[i] > lst1[i+1]:
+           isasc = True
+       else:
+            isasc = False
+            break
+
+   for i in range(ln - 1):
+       if lst1[i] < lst1[i + 1]:
+           isdec = True
+       else:
+           isdec = False
+           break
+
+
+   if isasc or isdec == True:
+       print("Monotonic")
+   else:
+       print("Not monotonic")
+
+lst1 = [22, 33, 44, 55]
+listorder(lst1)
+
+finding leap year
+
+def lpyear(syr, eyr):
+    lpyr = []
+    cnyr = []
+    for i in range(syr, eyr):
+        if i%4 == 0:
+            lpyr.append(i)
+        else:
+            diff = i % 4
+            i = i - diff
+            cnyr.append(i)
+    print(lpyr, "\n", cnyr)
+
+lpyear(2000,2023)
+
+def lpyear(yr):
+    upyr = 0
+    if yr % 4 != 0:
+        upyr = yr - yr % 4
+    print("Given Year = ",yr, "\n", "Converted Year = ",upyr)
+
+def lpyear(yr):
+    upyr = 0
+    if yr % 4 == 0:
+        print("Given year is a leap year")
+    else:
+        upyr = yr - yr % 4
+        print("Given Year = ",yr, "\n", "Converted Year = ",upyr)
+
+lpyear(2027)
+
+# prime number
+
+def primenumber(num):
+    lst1 = []
+
+    for x in range(1, num+1):
+        flag = True
+        for y in range (2,x):
+            if x % y == 0:
+                flag = False
+                break
+        if flag == True:
+            lst1.append(x)
+    return lst1
+
+print(primenumber(10))
+
+
+# Find HCF
+
+def findhcf(num1, num2):
+
+    if num1 > num2:
+        if num1%num2 == 0:
+            print("HCF = ", num2)
+        # else:
+        #     for x in range
+
+findhcf(55, 5)
+
+# take tuple > add something on 0th index if length is even else remove 0th index
+tpl = (0,2,8,8,6,5)
+tpl = list(tpl)
+
+if len(tpl)%2 == 0:
+    tpl.insert(0, "Messi")
+
+else:
+    tpl.pop(0)
+tpl = tuple(tpl)
+print(tpl.count(90))
+print(tpl)
+
+
+# learning while loop
+i = 0
+while(i < 5):
+    print("Sam")
+    i = i+1
+
+j=0
+while(j<10):
+    j=j+1
+    print("10 X ", j, " = ", 10 * j)
+
+def whlsum(num):
+    sum = 0
+    i=1
+    while(i <= num):
+        sum = sum + i
+        i = i+ 1
+    print(sum)
+
+    while(True):
+        if i <= num:
+            sum = sum +i
+            i = i + 1
+        else:
+            break
+    print(sum)
+
+whlsum(10)
+
+# Happy number
+def happynum(num):
+    givennum = str(num)
+    dup_num = set()
+    i = 0
+    while True:
+        if givennum != "1" and givennum not in dup_num:
+            sum = 0
+            dup_num.add(givennum)
+            print(dup_num)
+            for x in givennum:
+                sum = sum + int(x) ** 2
+            givennum = str(sum)
+
+        elif givennum in dup_num:
+            print(givennum, "Duplicate num in set")
+            break
+        else:
+            print(givennum, "Happy Number")
+            break
+
+happynum(99)
+
+#Verify given number is a happy number or not-
+def happynum(enternumber):
+    orignalnum = enternumber
+    check_dup_num = set()
+    while True:
+        sum = 0
+        if enternumber != 1 and enternumber not in check_dup_num:
+            check_dup_num.add(enternumber)
+            for x in str(enternumber):
+                sum = sum + int(x)**2
+            enternumber = sum
+        elif enternumber in check_dup_num:
+            print("Given Number", orignalnum, "is Not a Happy number")
+            break
+        else:
+            print("Given Number",orignalnum, "is a Happy number")
+            break
+
+enternumber = input("Enter your number : ")
+happynum(enternumber)
+
+# Remove empty list from the given list
+
+def filterlist(lst1):
+    lst2 = []
+    for x in lst1:
+        if x != []:
+            lst2.append(x)
+    print(" Given list : ", lst1,"\n", "Filtered List : ", lst2)
+
+lst1 = [12,23,[],44,"ae", [],"we", 34,[]]
+filterlist(lst1)
+
+def countlistitems(lst1):
+    if len(lst1) != 0:
+        for x in lst1:
+            print(x, " = ", lst1.count(x), "times")
+    else:
+        print("List is empty")
+
+lst1 = [12,23,34,"we","we", 34,["22"],[]]
+countlistitems(lst1)
+
+# Merging list
+def mrglist(lst1):
+    emptylist = []
+    for x in range(len(lst1)):
+        for y in lst1[x]:
+            emptylist.append(y)
+    print(emptylist)
+    lst2 = set(emptylist)
+    print(list(lst2))
+
+    # st = set()
+    # for x in lst1:
+    #     for y in x:
+    #         st.add(y)
+    # st = list(st)
+    # print(st)
+
+
+lst1 = [[11, False, "Sam1", "Moni1", 1], [21, False,"Sam2", "Moni1", 11], [31, False, True, "Sam3", "Moni1", 22], [41, False, "Sam4", "Moni1", 23]]
+mrglist(lst1)
+
+# Find that given list is monotonic or not
+
+def monotonic(lst1):
+    asc = desc = True
+    # desc = True
+
+    for x in range(len(lst1)-1):
+        if lst1[x] < lst1[x+1]:
+            asc = True
+        else:
+            asc = False
+            break
+    for y in range(len(lst1)-1):
+        if lst1[y] > lst1[y + 1]:
+            desc = True
+        else:
+            desc = False
+            break
+    if asc == True or desc == True:
+        print("Monototnic List = ", lst1)
+    else:
+        print("Not Monototnic List = ", lst1)
+
+
+lst1 = [111,110,0,80,75,66]
+monotonic(lst1)
