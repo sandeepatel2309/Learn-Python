@@ -1,0 +1,49 @@
+pystring = "This is a string"
+pyint = 1991
+pyfloat = 91.88
+pyboolean = True
+pylist = ["List", 991, True, 12.22]
+pytuple = ("Tuple", 119, False, 22.12)
+
+#get a type of variable
+print(type(pystring)," = ", pystring)
+print(type(pyint)," = ", pyint)
+print(type(pyfloat)," = ", pyfloat)
+print(type(pyboolean)," = ", pyboolean)
+print(type(pylist)," = ", pylist)
+print(type(pytuple)," = ", pytuple)
+
+#Print list, tuple in ascending/descending order order
+ordlist = [23, 14, 34, 22, 65, 54]
+ordlist.sort()
+print("Ascending Order = ", ordlist)
+ordlist.sort(reverse=True)
+print("Descending Order = ", ordlist)
+
+#Playing with List
+indxlist = ["Hina", "Jaya", "Sushma", "Nirma", 91, 92]
+
+#Find index and using that index print value on that index
+myindx = indxlist.index("Nirma")
+print("This value (", indxlist[myindx], ") available on ",myindx, " index")
+
+#Manipulating List
+
+indxlist.insert(1, "Rekha")
+indxlist.remove(91)
+indxlist.pop(5)
+indxlist.append("Seema")
+indxlist.extend("Ch")
+print("Updated indxlist list = ", indxlist)
+print("length of indxlist list = ", len(indxlist))
+
+#using set data type
+setlist = [22, 34, 43, 34, 55, 11, 22, 33, "Mona", "Mona"]
+set(setlist)
+print("List values after set = ",setlist)
+
+#dictionary
+
+mydictionary = {"Name": "Sam"}
+print(type(mydictionary))
+print(mydictionary)
